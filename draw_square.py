@@ -1,8 +1,18 @@
 import turtle
 
-def draw_square():
+def drawing():
 	window = turtle.Screen()
 	window.bgcolor("red")
+
+	draw_square()
+	draw_circle()
+	draw_triangle()
+
+	window.exitonclick()
+
+
+def draw_square():
+	
 
 	# instancing a turtle to draw
 	brad = turtle.Turtle()
@@ -13,15 +23,15 @@ def draw_square():
 	brad.speed(2)
 
 	# drawing a square
-	brad.forward(100)
-	brad.right(90)
-	brad.forward(100)
-	brad.right(90)
-	brad.forward(100)
-	brad.right(90)
-	brad.forward(100)
-	brad.right(90)
+	count = 0
+	while count < 4:
+		brad.forward(100)
+		brad.right(90)
+		count += 1
 
+	
+
+def draw_circle():
 	# instancing a new turtle
 	bozo = turtle.Turtle()
 
@@ -33,6 +43,20 @@ def draw_square():
 	# drawing a circle
 	bozo.circle(100)
 
-	window.exitonclick()
+def draw_triangle():
+	# instancing a new turtle
+	xuxa = turtle.Turtle()
 
-draw_square()
+	# customizing the new turtle
+	xuxa.shape("turtle")
+	xuxa.color("purple")
+	xuxa.speed(2)
+
+	# draw a triangle
+	count = 0
+	while count < 3:
+		xuxa.forward(100)
+		xuxa.right(120)
+		count += 1
+
+drawing()
